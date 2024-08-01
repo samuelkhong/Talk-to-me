@@ -12,13 +12,13 @@ const MessageList = ({messages}) => {
                 {reversedMessages.map((messages, index) => (
                     <li key = {index}>
                         <span className="timestamp">
-                            {new Date(message.timestamp).toLocaleDateString()}
+                            {new Date(messages.timestamp).toLocaleDateString()}
                         </span>
                         <span>
-                            {message.user ? message.user.username : 'Anonymous'}
+                            {messages.user ? messages.user.username : 'Anonymous'}
                         </span>
                         <span>
-                            {message.content}
+                            {messages.content}
                         </span>
                     </li>
                 ))}
